@@ -11,6 +11,10 @@
 		1A22CEA62808E4330030F0F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22CEA52808E4330030F0F6 /* ContentView.swift */; };
 		1A22CEA82808E4340030F0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A22CEA72808E4340030F0F6 /* Assets.xcassets */; };
 		1A22CEAB2808E4340030F0F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A22CEAA2808E4340030F0F6 /* Preview Assets.xcassets */; };
+		1A22CEB22808E4F20030F0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22CEB12808E4F20030F0F6 /* AppDelegate.swift */; };
+		1A22CEB42808E68E0030F0F6 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22CEB32808E68E0030F0F6 /* HealthStore.swift */; };
+		1A22CEB62808E7DD0030F0F6 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22CEB52808E7DD0030F0F6 /* DateExtensions.swift */; };
+		1A22CEBA2808E8310030F0F6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22CEB92808E8310030F0F6 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		1A22CEA52808E4330030F0F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A22CEA72808E4340030F0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A22CEAA2808E4340030F0F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A22CEB12808E4F20030F0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A22CEB32808E68E0030F0F6 /* HealthStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		1A22CEB52808E7DD0030F0F6 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		1A22CEB72808E8310030F0F6 /* HealthKitBackgroundQuery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitBackgroundQuery.entitlements; sourceTree = "<group>"; };
+		1A22CEB92808E8310030F0F6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A22CEBA2808E8310030F0F6 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +47,7 @@
 			children = (
 				1A22CEA22808E4330030F0F6 /* HealthKitBackgroundQuery */,
 				1A22CEA12808E4330030F0F6 /* Products */,
+				1A22CEB82808E8310030F0F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +62,13 @@
 		1A22CEA22808E4330030F0F6 /* HealthKitBackgroundQuery */ = {
 			isa = PBXGroup;
 			children = (
-				1A22CEA32808E4330030F0F6 /* HealthKitBackgroundQueryApp.swift */,
-				1A22CEA52808E4330030F0F6 /* ContentView.swift */,
+				1A22CEB72808E8310030F0F6 /* HealthKitBackgroundQuery.entitlements */,
+				1A22CEB12808E4F20030F0F6 /* AppDelegate.swift */,
 				1A22CEA72808E4340030F0F6 /* Assets.xcassets */,
+				1A22CEA52808E4330030F0F6 /* ContentView.swift */,
+				1A22CEA32808E4330030F0F6 /* HealthKitBackgroundQueryApp.swift */,
+				1A22CEB32808E68E0030F0F6 /* HealthStore.swift */,
+				1A22CEB52808E7DD0030F0F6 /* DateExtensions.swift */,
 				1A22CEA92808E4340030F0F6 /* Preview Content */,
 			);
 			path = HealthKitBackgroundQuery;
@@ -65,6 +80,14 @@
 				1A22CEAA2808E4340030F0F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A22CEB82808E8310030F0F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A22CEB92808E8310030F0F6 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A22CEB22808E4F20030F0F6 /* AppDelegate.swift in Sources */,
+				1A22CEB62808E7DD0030F0F6 /* DateExtensions.swift in Sources */,
 				1A22CEA62808E4330030F0F6 /* ContentView.swift in Sources */,
 				1A22CEA42808E4330030F0F6 /* HealthKitBackgroundQueryApp.swift in Sources */,
+				1A22CEB42808E68E0030F0F6 /* HealthStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +290,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitBackgroundQuery/HealthKitBackgroundQuery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitBackgroundQuery/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BG3523GAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app reads your health data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +321,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitBackgroundQuery/HealthKitBackgroundQuery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitBackgroundQuery/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BG3523GAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app reads your health data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

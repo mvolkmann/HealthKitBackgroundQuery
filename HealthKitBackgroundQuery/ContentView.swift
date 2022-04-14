@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HealthKitBackgroundQuery
-//
-//  Created by Mark Volkmann on 4/14/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
